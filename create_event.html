@@ -7,16 +7,22 @@
 </head>
 <body>
   <form>
-    <div data-role="fieldcontain">
-      <label for="event_name">Event name: </label>
-      <input type="text" data-clear-btn="true" name="event_name" id="text-3" value="">
-    </div>  
-    <div data-role="fieldcontain">
-      <label for="invitee">Invite: </label>
-      <select class="populate select2-offscreen" name="invitee" id="friends">
-        <!--- Loop for friends -->
-      </select>
-    </div>
+    <label for="event_name">Event name:</label>
+    <input type="text" data-clear-btn="true" name="event_name" id="text-3" value="">
+    <label for="invitee">Invite:</label>
+    <select class="populate select2-offscreen" name="invitee" id="invitee">
+      <!--- Loop for friends -->
+    </select>
+    <label for="start_time">Start Time:</label>
+    <input type="time" data-clear-btn="false" name="start_time" id="start_time" value="">
+    <label for="end_time">End Time:</label>
+    <input type="time" data-clear-btn="false" name="end_time" id="end_time" value="">
+    <label for="weekday">Days:</label>
+    <select name="weekday" id="weekday" data-role="slider" data-mini="true">
+      <option value="weekday">Weekday</option>
+      <option value="weekend">Weekend</option>
+    </select>
+    <input type="submit" value="Create">
   </form>
   <!--- Load scripts here asynchronous -->
   <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
